@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            devDept.Eyeshot.BoundingBox boundingBox1 = new devDept.Eyeshot.BoundingBox(System.Drawing.Color.Black, System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63))))), ((ushort)(3855)), false, false, new devDept.Geometry.Point3D(0D, 0D, 0D), new devDept.Geometry.Point3D(1D, 1D, 1D), "", "(Not applicable)", false);
             devDept.Eyeshot.CancelToolBarButton cancelToolBarButton1 = new devDept.Eyeshot.CancelToolBarButton("Cancel", devDept.Eyeshot.ToolBarButton.styleType.ToggleButton, true, true);
-            devDept.Eyeshot.ProgressBar progressBar1 = new devDept.Eyeshot.ProgressBar(devDept.Eyeshot.ProgressBar.styleType.Circular, 0, "Idle", System.Drawing.Color.Black, System.Drawing.Color.Transparent, System.Drawing.Color.Green, 1D, true, cancelToolBarButton1, false);
+            devDept.Eyeshot.ProgressBar progressBar1 = new devDept.Eyeshot.ProgressBar(devDept.Eyeshot.ProgressBar.styleType.Circular, 0, "Idle", System.Drawing.Color.Black, System.Drawing.Color.Transparent, System.Drawing.Color.Green, 1D, true, cancelToolBarButton1, false, 0.1D, true);
             devDept.Graphics.BackgroundSettings backgroundSettings1 = new devDept.Graphics.BackgroundSettings(devDept.Graphics.backgroundStyleType.LinearGradient, System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245))))), System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(210))))), 0.75D, null, devDept.Graphics.colorThemeType.Auto, 0.3D);
-            devDept.Eyeshot.Camera camera1 = new devDept.Eyeshot.Camera(new devDept.Geometry.Point3D(0D, 0D, 50D), 600D, new devDept.Geometry.Quaternion(0.086824088833465166D, 0.15038373318043533D, 0.492403876506104D, 0.85286853195244339D), devDept.Graphics.projectionType.Perspective, 50D, 2.9500008021220028D, false);
+            devDept.Eyeshot.Camera camera1 = new devDept.Eyeshot.Camera(new devDept.Geometry.Point3D(0D, 0D, 50D), 600D, new devDept.Geometry.Quaternion(0.086824088833465166D, 0.15038373318043533D, 0.492403876506104D, 0.85286853195244339D), devDept.Graphics.projectionType.Perspective, 50D, 2.9500008021220028D, false, 0.001D);
             devDept.Eyeshot.HomeToolBarButton homeToolBarButton1 = new devDept.Eyeshot.HomeToolBarButton("Home", devDept.Eyeshot.ToolBarButton.styleType.PushButton, true, true);
             devDept.Eyeshot.MagnifyingGlassToolBarButton magnifyingGlassToolBarButton1 = new devDept.Eyeshot.MagnifyingGlassToolBarButton("Magnifying Glass", devDept.Eyeshot.ToolBarButton.styleType.ToggleButton, true, true);
             devDept.Eyeshot.ZoomWindowToolBarButton zoomWindowToolBarButton1 = new devDept.Eyeshot.ZoomWindowToolBarButton("Zoom Window", devDept.Eyeshot.ToolBarButton.styleType.ToggleButton, true, true);
@@ -48,20 +47,21 @@
             ((devDept.Eyeshot.ToolBarButton)(panToolBarButton1)),
             ((devDept.Eyeshot.ToolBarButton)(rotateToolBarButton1)),
             ((devDept.Eyeshot.ToolBarButton)(zoomFitToolBarButton1))});
-            devDept.Eyeshot.Grid grid1 = new devDept.Eyeshot.Grid(new devDept.Geometry.Point3D(-100D, -100D, 0D), new devDept.Geometry.Point3D(100D, 100D, 0D), 5D, new devDept.Geometry.Plane(new devDept.Geometry.Point3D(0D, 0D, 0D), new devDept.Geometry.Vector3D(0D, 0D, 1D)), System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))), System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32))))), System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32))))), false, true, false, false, 10, 100, 5, System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90))))), System.Drawing.Color.Transparent, false);
+            devDept.Eyeshot.Grid grid1 = new devDept.Eyeshot.Grid(new devDept.Geometry.Point3D(-100D, -100D, 0D), new devDept.Geometry.Point3D(100D, 100D, 0D), 5D, new devDept.Geometry.Plane(new devDept.Geometry.Point3D(0D, 0D, 0D), new devDept.Geometry.Vector3D(0D, 0D, 1D)), System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))), System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32))))), System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32))))), false, true, false, false, 10, 100, 5, System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90))))), System.Drawing.Color.Transparent, false, System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255))))));
             devDept.Eyeshot.RotateSettings rotateSettings1 = new devDept.Eyeshot.RotateSettings(new devDept.Eyeshot.MouseButton(devDept.Eyeshot.mouseButtonsZPR.Middle, devDept.Eyeshot.modifierKeys.None), 10D, true, 1D, devDept.Eyeshot.rotationType.Trackball, devDept.Eyeshot.rotationCenterType.CursorLocation, new devDept.Geometry.Point3D(0D, 0D, 0D), false);
-            devDept.Eyeshot.ZoomSettings zoomSettings1 = new devDept.Eyeshot.ZoomSettings(new devDept.Eyeshot.MouseButton(devDept.Eyeshot.mouseButtonsZPR.Middle, devDept.Eyeshot.modifierKeys.Shift), 25, true, devDept.Eyeshot.zoomStyleType.AtCursorLocation, false, 1D, System.Drawing.Color.DeepSkyBlue, devDept.Eyeshot.Camera.perspectiveFitType.Accurate, false, 10);
+            devDept.Eyeshot.ZoomSettings zoomSettings1 = new devDept.Eyeshot.ZoomSettings(new devDept.Eyeshot.MouseButton(devDept.Eyeshot.mouseButtonsZPR.Middle, devDept.Eyeshot.modifierKeys.Shift), 25, true, devDept.Eyeshot.zoomStyleType.AtCursorLocation, false, 1D, System.Drawing.Color.DeepSkyBlue, devDept.Eyeshot.Camera.perspectiveFitType.Accurate, false, 10, true);
             devDept.Eyeshot.PanSettings panSettings1 = new devDept.Eyeshot.PanSettings(new devDept.Eyeshot.MouseButton(devDept.Eyeshot.mouseButtonsZPR.Middle, devDept.Eyeshot.modifierKeys.Ctrl), 25, true);
             devDept.Eyeshot.NavigationSettings navigationSettings1 = new devDept.Eyeshot.NavigationSettings(devDept.Eyeshot.Camera.navigationType.Examine, new devDept.Eyeshot.MouseButton(devDept.Eyeshot.mouseButtonsZPR.Left, devDept.Eyeshot.modifierKeys.None), new devDept.Geometry.Point3D(-1000D, -1000D, -1000D), new devDept.Geometry.Point3D(1000D, 1000D, 1000D), 8D, 50D, 50D);
             devDept.Eyeshot.Viewport.SavedViewsManager savedViewsManager1 = new devDept.Eyeshot.Viewport.SavedViewsManager(8);
-            devDept.Eyeshot.Viewport viewport1 = new devDept.Eyeshot.Viewport(new System.Drawing.Point(0, 0), new System.Drawing.Size(389, 295), backgroundSettings1, camera1, toolBar1, devDept.Eyeshot.displayType.Rendered, true, false, false, false, new devDept.Eyeshot.Grid[] {
+            devDept.Eyeshot.Viewport viewport1 = new devDept.Eyeshot.Viewport(new System.Drawing.Point(0, 0), new System.Drawing.Size(389, 295), backgroundSettings1, camera1, new devDept.Eyeshot.ToolBar[] {
+            toolBar1}, devDept.Eyeshot.displayType.Rendered, true, false, false, false, new devDept.Eyeshot.Grid[] {
             grid1}, false, rotateSettings1, zoomSettings1, panSettings1, navigationSettings1, savedViewsManager1, devDept.Eyeshot.viewType.Trimetric);
             devDept.Eyeshot.CoordinateSystemIcon coordinateSystemIcon1 = new devDept.Eyeshot.CoordinateSystemIcon(System.Drawing.Color.Black, System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80))))), System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80))))), System.Drawing.Color.OrangeRed, "Origin", "X", "Y", "Z", true, devDept.Eyeshot.coordinateSystemPositionType.BottomLeft, 37, false);
             devDept.Eyeshot.OriginSymbol originSymbol1 = new devDept.Eyeshot.OriginSymbol(10, devDept.Eyeshot.originSymbolStyleType.Ball, System.Drawing.Color.Black, System.Drawing.Color.Red, System.Drawing.Color.Green, System.Drawing.Color.Blue, "Origin", "X", "Y", "Z", true, null, false);
             devDept.Eyeshot.ViewCubeIcon viewCubeIcon1 = new devDept.Eyeshot.ViewCubeIcon(devDept.Eyeshot.coordinateSystemPositionType.TopRight, true, System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(43)))), ((int)(((byte)(226))))), true, "FRONT", "BACK", "LEFT", "RIGHT", "TOP", "BOTTOM", System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77))))), System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77))))), System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77))))), System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77))))), System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77))))), System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77))))), 'S', 'N', 'W', 'E', true, System.Drawing.Color.White, System.Drawing.Color.Black, 120, true, true, null, null, null, null, null, null, false);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.chkCol1 = new System.Windows.Forms.CheckBox();
+            this.chkCol2 = new System.Windows.Forms.CheckBox();
+            this.btnOk = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,48 +72,49 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtBaseLength = new System.Windows.Forms.TextBox();
+            this.txtBaseWidth = new System.Windows.Forms.TextBox();
+            this.txtBaseDepth = new System.Windows.Forms.TextBox();
+            this.txtColLength = new System.Windows.Forms.TextBox();
+            this.txtColWidth = new System.Windows.Forms.TextBox();
+            this.txtColHeight = new System.Windows.Forms.TextBox();
+            this.txtCol1XOffset = new System.Windows.Forms.TextBox();
+            this.txtCol1YOffset = new System.Windows.Forms.TextBox();
+            this.txtCol2XOffset = new System.Windows.Forms.TextBox();
+            this.txtCol2YOffset = new System.Windows.Forms.TextBox();
             this.viewportLayout1 = new devDept.Eyeshot.ViewportLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewportLayout1)).BeginInit();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // chkCol1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(433, 104);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(70, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Column 1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkCol1.AutoSize = true;
+            this.chkCol1.Location = new System.Drawing.Point(433, 104);
+            this.chkCol1.Name = "chkCol1";
+            this.chkCol1.Size = new System.Drawing.Size(70, 17);
+            this.chkCol1.TabIndex = 1;
+            this.chkCol1.Text = "Column 1";
+            this.chkCol1.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkCol2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(531, 104);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(70, 17);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Column 2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkCol2.AutoSize = true;
+            this.chkCol2.Location = new System.Drawing.Point(531, 104);
+            this.chkCol2.Name = "chkCol2";
+            this.chkCol2.Size = new System.Drawing.Size(70, 17);
+            this.chkCol2.TabIndex = 2;
+            this.chkCol2.Text = "Column 2";
+            this.chkCol2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnOk
             // 
-            this.button1.Location = new System.Drawing.Point(536, 347);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 34);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOk.Location = new System.Drawing.Point(536, 347);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(80, 34);
+            this.btnOk.TabIndex = 3;
+            this.btnOk.Text = "OK";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // label1
             // 
@@ -205,91 +206,96 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "Col 2 Y offset:";
             // 
-            // textBox1
+            // txtBaseLength
             // 
-            this.textBox1.Location = new System.Drawing.Point(516, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 14;
+            this.txtBaseLength.Location = new System.Drawing.Point(516, 26);
+            this.txtBaseLength.Name = "txtBaseLength";
+            this.txtBaseLength.Size = new System.Drawing.Size(100, 20);
+            this.txtBaseLength.TabIndex = 14;
             // 
-            // textBox2
+            // txtBaseWidth
             // 
-            this.textBox2.Location = new System.Drawing.Point(516, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtBaseWidth.Location = new System.Drawing.Point(516, 52);
+            this.txtBaseWidth.Name = "txtBaseWidth";
+            this.txtBaseWidth.Size = new System.Drawing.Size(100, 20);
+            this.txtBaseWidth.TabIndex = 15;
             // 
-            // textBox3
+            // txtBaseDepth
             // 
-            this.textBox3.Location = new System.Drawing.Point(516, 78);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 16;
+            this.txtBaseDepth.Location = new System.Drawing.Point(516, 78);
+            this.txtBaseDepth.Name = "txtBaseDepth";
+            this.txtBaseDepth.Size = new System.Drawing.Size(100, 20);
+            this.txtBaseDepth.TabIndex = 16;
             // 
-            // textBox4
+            // txtColLength
             // 
-            this.textBox4.Location = new System.Drawing.Point(516, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 17;
+            this.txtColLength.Location = new System.Drawing.Point(516, 131);
+            this.txtColLength.Name = "txtColLength";
+            this.txtColLength.Size = new System.Drawing.Size(100, 20);
+            this.txtColLength.TabIndex = 17;
             // 
-            // textBox5
+            // txtColWidth
             // 
-            this.textBox5.Location = new System.Drawing.Point(516, 157);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 18;
+            this.txtColWidth.Location = new System.Drawing.Point(516, 157);
+            this.txtColWidth.Name = "txtColWidth";
+            this.txtColWidth.Size = new System.Drawing.Size(100, 20);
+            this.txtColWidth.TabIndex = 18;
             // 
-            // textBox6
+            // txtColHeight
             // 
-            this.textBox6.Location = new System.Drawing.Point(516, 183);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 19;
+            this.txtColHeight.Location = new System.Drawing.Point(516, 183);
+            this.txtColHeight.Name = "txtColHeight";
+            this.txtColHeight.Size = new System.Drawing.Size(100, 20);
+            this.txtColHeight.TabIndex = 19;
             // 
-            // textBox7
+            // txtCol1XOffset
             // 
-            this.textBox7.Location = new System.Drawing.Point(516, 209);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 20;
+            this.txtCol1XOffset.Location = new System.Drawing.Point(516, 209);
+            this.txtCol1XOffset.Name = "txtCol1XOffset";
+            this.txtCol1XOffset.Size = new System.Drawing.Size(100, 20);
+            this.txtCol1XOffset.TabIndex = 20;
             // 
-            // textBox8
+            // txtCol1YOffset
             // 
-            this.textBox8.Location = new System.Drawing.Point(516, 235);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 21;
+            this.txtCol1YOffset.Location = new System.Drawing.Point(516, 235);
+            this.txtCol1YOffset.Name = "txtCol1YOffset";
+            this.txtCol1YOffset.Size = new System.Drawing.Size(100, 20);
+            this.txtCol1YOffset.TabIndex = 21;
             // 
-            // textBox9
+            // txtCol2XOffset
             // 
-            this.textBox9.Location = new System.Drawing.Point(516, 261);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 22;
+            this.txtCol2XOffset.Location = new System.Drawing.Point(516, 261);
+            this.txtCol2XOffset.Name = "txtCol2XOffset";
+            this.txtCol2XOffset.Size = new System.Drawing.Size(100, 20);
+            this.txtCol2XOffset.TabIndex = 22;
             // 
-            // textBox10
+            // txtCol2YOffset
             // 
-            this.textBox10.Location = new System.Drawing.Point(516, 287);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 23;
+            this.txtCol2YOffset.Location = new System.Drawing.Point(516, 287);
+            this.txtCol2YOffset.Name = "txtCol2YOffset";
+            this.txtCol2YOffset.Size = new System.Drawing.Size(100, 20);
+            this.txtCol2YOffset.TabIndex = 23;
             // 
             // viewportLayout1
             // 
-            this.viewportLayout1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.viewportLayout1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.viewportLayout1.BoundingBox = boundingBox1;
             this.viewportLayout1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.viewportLayout1.FastZPR = false;
             this.viewportLayout1.Location = new System.Drawing.Point(12, 12);
             this.viewportLayout1.Name = "viewportLayout1";
             this.viewportLayout1.ProgressBar = progressBar1;
             this.viewportLayout1.Size = new System.Drawing.Size(389, 295);
             this.viewportLayout1.TabIndex = 24;
             this.viewportLayout1.Text = "viewportLayout1";
+            coordinateSystemIcon1.LabelFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             viewport1.CoordinateSystemIcon = coordinateSystemIcon1;
+            viewport1.Legends = new devDept.Eyeshot.Legend[0];
+            originSymbol1.LabelFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             viewport1.OriginSymbol = originSymbol1;
+            viewCubeIcon1.Font = null;
+            viewCubeIcon1.InitialRotation = new devDept.Geometry.Quaternion(0D, 0D, 0D, 1D);
             viewport1.ViewCubeIcon = viewCubeIcon1;
             this.viewportLayout1.Viewports.Add(viewport1);
             // 
@@ -299,16 +305,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 393);
             this.Controls.Add(this.viewportLayout1);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCol2YOffset);
+            this.Controls.Add(this.txtCol2XOffset);
+            this.Controls.Add(this.txtCol1YOffset);
+            this.Controls.Add(this.txtCol1XOffset);
+            this.Controls.Add(this.txtColHeight);
+            this.Controls.Add(this.txtColWidth);
+            this.Controls.Add(this.txtColLength);
+            this.Controls.Add(this.txtBaseDepth);
+            this.Controls.Add(this.txtBaseWidth);
+            this.Controls.Add(this.txtBaseLength);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -319,9 +325,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.chkCol2);
+            this.Controls.Add(this.chkCol1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.viewportLayout1)).EndInit();
@@ -333,9 +339,9 @@
         #endregion
 
 
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox chkCol1;
+        private System.Windows.Forms.CheckBox chkCol2;
+        private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -346,16 +352,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtBaseLength;
+        private System.Windows.Forms.TextBox txtBaseWidth;
+        private System.Windows.Forms.TextBox txtBaseDepth;
+        private System.Windows.Forms.TextBox txtColLength;
+        private System.Windows.Forms.TextBox txtColWidth;
+        private System.Windows.Forms.TextBox txtColHeight;
+        private System.Windows.Forms.TextBox txtCol1XOffset;
+        private System.Windows.Forms.TextBox txtCol1YOffset;
+        private System.Windows.Forms.TextBox txtCol2XOffset;
+        private System.Windows.Forms.TextBox txtCol2YOffset;
         private devDept.Eyeshot.ViewportLayout viewportLayout1;
     }
 }

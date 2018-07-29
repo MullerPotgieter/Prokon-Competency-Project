@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using devDept.Eyeshot;
+using devDept.Eyeshot.Entities;
+using devDept.Geometry;
 
 namespace Building
 {
@@ -18,5 +21,6 @@ namespace Building
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
     }
 }
